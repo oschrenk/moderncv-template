@@ -1,6 +1,6 @@
 # README #
 
-A curriculum vitae using a modified version of [moderncv](http://www.ctan.org/pkg/moderncv). Feel free to fork away but be sure to change the information.
+A resume/curriculum vitae template in Latex based on the [moderncv](http://www.ctan.org/pkg/moderncv) package . Feel free to fork away but be sure to change the information.
 
 The font used is called [Myriad Pro Light](http://store1.adobe.com/cfusion/store/html/index.cfm?store=OLS-US&event=displayFont&code=MYRP10003000) and costs $35.
 
