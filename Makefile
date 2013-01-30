@@ -1,4 +1,4 @@
-MAIN_FILE = cv
+MAIN_FILE = resume
 
 pdf:
 	echo ${MAIN_FILE}.tex
