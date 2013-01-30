@@ -49,20 +49,20 @@
 %                resume style definition
 %-------------------------------------------------------------------------------
 % fonts
-\renewcommand*{\namefont}{\fontsize{34}{36}\mdseries\upshape}
-\renewcommand*{\titlefont}{\LARGE\mdseries\slshape}
-\renewcommand*{\addressfont}{\small\mdseries\slshape}
-\renewcommand*{\quotefont}{\large\slshape}
-\renewcommand*{\sectionfont}{\Large\mdseries\upshape}
+\renewcommand*{\namefont}{\fontsize{34}{36}\sffamily\mdseries\upshape}
+\renewcommand*{\titlefont}{\LARGE\mdseries}
+\renewcommand*{\addressfont}{\small\mdseries}
+\renewcommand*{\quotefont}{\small\slshape}
+\renewcommand*{\sectionfont}{\Large\sffamily\mdseries\upshape}
 \renewcommand*{\subsectionfont}{\large\mdseries\upshape}
-\renewcommand*{\hintfont}{}
+\renewcommand*{\hintfont}{\small\sffamily}
 
 % styles
 \renewcommand*{\namestyle}[1]{{\namefont\textcolor{color0}{#1}}}
 \renewcommand*{\titlestyle}[1]{{\titlefont\textcolor{color2}{#1}}}
-\renewcommand*{\addressstyle}[1]{{\addressfont\textcolor{color1}{#1}}}
+\renewcommand*{\addressstyle}[1]{{\addressfont\textcolor{color0}{#1}}}
 \renewcommand*{\quotestyle}[1]{{\quotefont\textcolor{color1}{#1}}}
-\renewcommand*{\sectionstyle}[1]{{\sectionfont\textcolor{color1}{#1}}}
+\renewcommand*{\sectionstyle}[1]{{\sectionfont\textcolor{color0}{#1}}}
 \renewcommand*{\subsectionstyle}[1]{{\subsectionfont\textcolor{color1}{#1}}}
 \renewcommand*{\hintstyle}[1]{{\hintfont\textcolor{color0}{#1}}}
 
@@ -81,7 +81,7 @@
 
 % commands
 \renewcommand*{\recomputecvlengths}{%
-  \setlength{\quotewidth}{0.65\textwidth}%
+  \setlength{\quotewidth}{0.55\textwidth}%
   % main lenghts
   \setlength{\maincolumnwidth}{\textwidth-\separatorcolumnwidth-\hintscolumnwidth}%
   % listitem lengths
@@ -196,7 +196,7 @@
     {}%
     {\listitemsymbol\begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#3\end{minipage}}}}
 
-\renewcommand*{\cventry}[7][.25em]{%
+\renewcommand*{\cventry}[7][1em]{%
   \cvitem[#1]{#2}{%
     {\bfseries#3}%
     \ifthenelse{\equal{#4}{}}{}{, {\slshape#4}}%
