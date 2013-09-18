@@ -38,14 +38,6 @@
     \hypersetup{colorlinks,urlcolor=CadetBlue}
 }
 
-
-% remove boxes
-\usepackage{etoolbox}% http://ctan.org/pkg/etoolbox
-\patchcmd{\section}% <cmd>
-  {\strut}% <search>
-  {\strut\renewcommand{\raisebox}[2]{}}% <replace>
-  {}{}% <success><failure>
-
 % align name, adress and photo
 \makeatletter
 \renewcommand*{\makecvtitle}{%
@@ -57,10 +49,11 @@
     \addressfont\color{color2}%
     \begin{tabular}[t]{@{}r@{}}%
       \ifthenelse{\isundefined{\@addressstreet}}{}{\makenewline\addresssymbol\@addressstreet%
-        \ifthenelse{\equal{\@addresscity}{}}{}{\makenewline\@addresscity}}% if \addresstreet is defined, \addresscity will always be defined but could be empty
+        \ifthenelse{\equal{\@addresscity}{}}{}{\makenewline\@addresscity}% if \addresstreet is defined, \addresscity and addresscountry will always be defined but could be empty
+        \ifthenelse{\equal{\@addresscountry}{}}{}{\makenewline\@addresscountry}}%
       \ifthenelse{\isundefined{\@mobile}}{}{\makenewline\mobilesymbol\@mobile}%
-      \ifthenelse{\isundefined{\@phone}}{}{\makenewline\phonesymbol\@phone}%
-      \ifthenelse{\isundefined{\@fax}}{}{\makenewline\faxsymbol\@fax}%
+      %\ifthenelse{\isundefined{\@phone}}{}{\makenewline\phonesymbol\@phone}%
+      %\ifthenelse{\isundefined{\@fax}}{}{\makenewline\faxsymbol\@fax}%
       \ifthenelse{\isundefined{\@email}}{}{\makenewline\emailsymbol\emaillink{\@email}}%
       \ifthenelse{\isundefined{\@homepage}}{}{\makenewline\homepagesymbol\httplink{\@homepage}}%
       \ifthenelse{\isundefined{\@extrainfo}}{}{\makenewline\@extrainfo}%
@@ -115,7 +108,7 @@
 \firstname{John}
 \familyname{Doe}
 \title {Software Engineer}
-\address{Acme Street 123}{12345 Acme Town}
+\address{Acme Street 123}{12345 Acme Town}{Acme Country}
 \mobile{+1 (0) 255 123 456 78}
 \email{john.doe@gmail.com}
 \homepage{google.com}\vspace{10 mm}

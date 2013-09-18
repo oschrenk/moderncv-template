@@ -2,7 +2,7 @@
 
 A resume/curriculum vitae template in Latex based on the [moderncv](http://www.ctan.org/pkg/moderncv) package . Feel free to fork away but be sure to change the information.
 
-![Preview](http://i.imgur.com/AVNVRwU.png)
+![Preview](http://i.imgur.com/vCNjCRm.png)
 
 ## Building ##
 
