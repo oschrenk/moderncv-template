@@ -15,7 +15,7 @@ If you don't have (the money for) the font, don't worry. Just pick another font 
 
 TeXworks and RStudio should pick up the typesetting engine using the directives at the beginning of the file. If you want are familiar with the command line you can just
 
-	$ xelatex cv.tex
+	$ xelatex resume.tex
 
 or use the Makefile for convenience and
 
